@@ -6,7 +6,7 @@ import fitz  # PyMuPDF
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173", "https://your-frontend.onrender.com"])
+CORS(app)
 
 model_name = "AsmaaElnagger/Diabetic_RetinoPathy_detection"
 model = AutoModelForImageClassification.from_pretrained(model_name)
